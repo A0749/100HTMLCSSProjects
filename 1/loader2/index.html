@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Loader</title>
+    <style>
+        body{
+            height: 100vh;
+            display: grid;
+            place-content: center;
+            background-color: aquamarine;
+        }
+        .spinning-loader{
+            width: 56px ;
+            height: 56px;
+            border-radius: 50%;
+            background-color: #474bff;
+            -webkit-mask: radial-gradient(circle closest-side at 50% 40%, #0000 94%, #000) ;
+            transform-origin: 50% 40%;
+            animation: spinner 1s infinite linear;
+        }
+        @keyframes spinner{
+            100%{
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="spinning-loader"></div>
+</body>
+</html>

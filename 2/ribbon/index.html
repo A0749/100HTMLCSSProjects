@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ribbon</title>
+  <style>
+    body{
+      display: grid;
+      place-content: center;
+      height: 100vh;
+      background-color: aqua;
+    }
+    .ribbon{
+      width: 400px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+    }
+    .ribbon{
+      --crib: 0.8em;
+      inset-inline: calc(-1*var(--crib));
+      border-bottom: var(--crib) solid #0008;
+      line-height: 1.8;
+      clip-path: polygon(0 0, 100% 0,100%
+        calc(100% - var(--crib)),
+        calc(100% - var(--crib)) 100%,
+        calc(100% - var(--crib))
+        calc(100% - var(--crib)),
+        
+        var(--crib)
+        calc(100% - var(--crib)),
+        var(--crib) 100%, 0
+        calc(100% - var(--crib))
+
+      );
+      background-color: #f37d7d;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="ribbon">Your text content</div>
+</body>
+</html>

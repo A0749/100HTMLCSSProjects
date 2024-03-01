@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Loader</title>
+    <style>
+       body{
+            display: grid;
+            place-content: center;
+            height: 100vh;
+        }
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  background: orange;
+  transform-origin: left;
+  animation: anim 2s infinite;
+}
+.loader:before {
+  transform-origin:right;
+  --s:-1;
+}
+@keyframes anim {
+   0%,
+   10%   {transform:translate(0,0)  scale(1)}
+
+   33%   {transform:translate
+           (calc(var(--s,1)*50%),0)  
+          scale(1)}
+
+   66%   {transform:translate
+          (calc(var(--s,1)*50%),calc(var(--s,1)*-50%))
+          scale(1)}
+
+   90%,
+   100%  {transform:translate
+          (calc(var(--s,1)*50%),calc(var(--s,1)*-50%))
+          scale(0.5,2)}
+    }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+</html>
